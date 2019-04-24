@@ -59,10 +59,10 @@ public:
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
     QLabel *label_6;
-    QRadioButton *radioButton_2;
-    QRadioButton *radioButton;
-    QRadioButton *radioButton_3;
-    QRadioButton *radioButton_4;
+    QRadioButton *radioButtonDecimal;
+    QRadioButton *radioButtonBinary;
+    QRadioButton *radioButtonOctal;
+    QRadioButton *radioButtonHexadecimal;
     QSlider *SliderLevel;
     QLabel *label_7;
     QMenuBar *menuBar;
@@ -196,25 +196,25 @@ public:
 
         verticalLayout->addWidget(label_6);
 
-        radioButton_2 = new QRadioButton(verticalLayoutWidget);
-        radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
+        radioButtonDecimal = new QRadioButton(verticalLayoutWidget);
+        radioButtonDecimal->setObjectName(QString::fromUtf8("radioButtonDecimal"));
 
-        verticalLayout->addWidget(radioButton_2);
+        verticalLayout->addWidget(radioButtonDecimal);
 
-        radioButton = new QRadioButton(verticalLayoutWidget);
-        radioButton->setObjectName(QString::fromUtf8("radioButton"));
+        radioButtonBinary = new QRadioButton(verticalLayoutWidget);
+        radioButtonBinary->setObjectName(QString::fromUtf8("radioButtonBinary"));
 
-        verticalLayout->addWidget(radioButton);
+        verticalLayout->addWidget(radioButtonBinary);
 
-        radioButton_3 = new QRadioButton(verticalLayoutWidget);
-        radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
+        radioButtonOctal = new QRadioButton(verticalLayoutWidget);
+        radioButtonOctal->setObjectName(QString::fromUtf8("radioButtonOctal"));
 
-        verticalLayout->addWidget(radioButton_3);
+        verticalLayout->addWidget(radioButtonOctal);
 
-        radioButton_4 = new QRadioButton(verticalLayoutWidget);
-        radioButton_4->setObjectName(QString::fromUtf8("radioButton_4"));
+        radioButtonHexadecimal = new QRadioButton(verticalLayoutWidget);
+        radioButtonHexadecimal->setObjectName(QString::fromUtf8("radioButtonHexadecimal"));
 
-        verticalLayout->addWidget(radioButton_4);
+        verticalLayout->addWidget(radioButtonHexadecimal);
 
         SliderLevel = new QSlider(centralWidget);
         SliderLevel->setObjectName(QString::fromUtf8("SliderLevel"));
@@ -249,10 +249,10 @@ public:
         label_4->setText(QApplication::translate("color_RGB", "Alpha", nullptr));
         label->setText(QApplication::translate("color_RGB", "Red", nullptr));
         label_6->setText(QApplication::translate("color_RGB", "LCD\346\230\276\347\244\272\350\277\233\345\210\266", nullptr));
-        radioButton_2->setText(QApplication::translate("color_RGB", "RadioButton", nullptr));
-        radioButton->setText(QApplication::translate("color_RGB", "RadioButton", nullptr));
-        radioButton_3->setText(QApplication::translate("color_RGB", "RadioButton", nullptr));
-        radioButton_4->setText(QApplication::translate("color_RGB", "RadioButton", nullptr));
+        radioButtonDecimal->setText(QApplication::translate("color_RGB", "\345\215\201\350\277\233\345\210\266", nullptr));
+        radioButtonBinary->setText(QApplication::translate("color_RGB", "\344\272\214\350\277\233\345\210\266", nullptr));
+        radioButtonOctal->setText(QApplication::translate("color_RGB", "\345\205\253\350\277\233\345\210\266", nullptr));
+        radioButtonHexadecimal->setText(QApplication::translate("color_RGB", "\345\215\201\345\205\255\350\277\233\345\210\266", nullptr));
         label_7->setText(QApplication::translate("color_RGB", "Level", nullptr));
     } // retranslateUi
 

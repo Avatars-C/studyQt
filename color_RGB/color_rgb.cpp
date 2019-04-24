@@ -36,7 +36,10 @@ color_RGB::~color_RGB()
 {
     delete ui;
 }
-
+/**
+ * @brief color_RGB::on_horizontalSlider_valueChanged
+ * @param value
+ */
 void color_RGB::on_horizontalSlider_valueChanged(int value)
 {
     //拖动Red、Green、Blue颜色滑动条时设置textEdit的底色
@@ -45,9 +48,9 @@ void color_RGB::on_horizontalSlider_valueChanged(int value)
     int R = ui->SliderRed->value();
     int G = ui->SliderGreen->value();
     int B = ui->SliderBlue->value();
-    int alpha = ui->SliderAlpha->value();
+    int alpha = ui->SliderAlpha->value(); //设置透明度
     color.setRgb(R,G,B,alpha);   //使用Qcolor的setRGB()函数获取颜色
-    printf("R=%d,G=%d,B=%d,alpha=%d",R,G,B,alpha);
+   // printf("R=%d,G=%d,B=%d,alpha=%d",R,G,B,alpha);
     QPalette pal = ui->textEdit->palette();
     pal.setColor(QPalette::Base,color); //设置底色
     ui->textEdit->setPalette(pal);
@@ -73,4 +76,36 @@ void color_RGB::colorSliderChangeUpdateSpinBox(QSlider *pQSlider, int pmax, int 
     pQSlider->setSingleStep(pstep);
 
     pQSpinBox->setValue(10);
+}
+
+void color_RGB::on_dial_valueChanged(int value)
+{
+    ui->lcdNumber->display(value);
+}
+
+void color_RGB::on_radioButtonDecimal_clicked()
+{
+    //十进制
+    ui->lcdNumber->setDigitCount(3);
+}
+
+
+void color_RGB::on_radioButtonBinary_clicked()
+{
+    //二进制
+    ui->lcdNumber->setDigitCount(8);
+    ui->lcdNumber->setBinMode();
+}
+
+void color_RGB::on_radioButtonOctal_clicked()
+{
+    //
+    ui->lcdNumber->setDigitCount(4);
+    ui->lcdNumber->setOctMode();
+}
+
+void color_RGB::on_radioButtonHexadecimal_clicked()
+{
+    ui->lcdNumber->setDigitCount(3);
+    ui->lcdNumber->setHexMode();
 }
