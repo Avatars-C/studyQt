@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_color_RGB_t {
-    QByteArrayData data[8];
-    char stringdata0[137];
+    QByteArrayData data[12];
+    char stringdata0[242];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -38,13 +38,20 @@ QT_MOC_LITERAL(3, 44, 5), // "value"
 QT_MOC_LITERAL(4, 50, 30), // "colorSliderChangeUpdateSpinBox"
 QT_MOC_LITERAL(5, 81, 8), // "QSlider*"
 QT_MOC_LITERAL(6, 90, 9), // "QSpinBox*"
-QT_MOC_LITERAL(7, 100, 36) // "mySliderAndSpinBoxChangeColor..."
+QT_MOC_LITERAL(7, 100, 20), // "on_dial_valueChanged"
+QT_MOC_LITERAL(8, 121, 29), // "on_radioButtonDecimal_clicked"
+QT_MOC_LITERAL(9, 151, 28), // "on_radioButtonBinary_clicked"
+QT_MOC_LITERAL(10, 180, 27), // "on_radioButtonOctal_clicked"
+QT_MOC_LITERAL(11, 208, 33) // "on_radioButtonHexadecimal_cli..."
 
     },
     "color_RGB\0on_horizontalSlider_valueChanged\0"
     "\0value\0colorSliderChangeUpdateSpinBox\0"
-    "QSlider*\0QSpinBox*\0"
-    "mySliderAndSpinBoxChangeColorConnect"
+    "QSlider*\0QSpinBox*\0on_dial_valueChanged\0"
+    "on_radioButtonDecimal_clicked\0"
+    "on_radioButtonBinary_clicked\0"
+    "on_radioButtonOctal_clicked\0"
+    "on_radioButtonHexadecimal_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -54,7 +61,7 @@ static const uint qt_meta_data_color_RGB[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -62,13 +69,21 @@ static const uint qt_meta_data_color_RGB[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   29,    2, 0x08 /* Private */,
-       4,    5,   32,    2, 0x08 /* Private */,
-       7,    0,   43,    2, 0x08 /* Private */,
+       1,    1,   49,    2, 0x08 /* Private */,
+       4,    5,   52,    2, 0x08 /* Private */,
+       7,    1,   63,    2, 0x08 /* Private */,
+       8,    0,   66,    2, 0x08 /* Private */,
+       9,    0,   67,    2, 0x08 /* Private */,
+      10,    0,   68,    2, 0x08 /* Private */,
+      11,    0,   69,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int,    3,
     QMetaType::Void, 0x80000000 | 5, QMetaType::Int, QMetaType::Int, QMetaType::Int, 0x80000000 | 6,    2,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::Int,    3,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -82,6 +97,11 @@ void color_RGB::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         switch (_id) {
         case 0: _t->on_horizontalSlider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 1: _t->colorSliderChangeUpdateSpinBox((*reinterpret_cast< QSlider*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])),(*reinterpret_cast< QSpinBox*(*)>(_a[5]))); break;
+        case 2: _t->on_dial_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 3: _t->on_radioButtonDecimal_clicked(); break;
+        case 4: _t->on_radioButtonBinary_clicked(); break;
+        case 5: _t->on_radioButtonOctal_clicked(); break;
+        case 6: _t->on_radioButtonHexadecimal_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -129,13 +149,13 @@ int color_RGB::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 7;
     }
     return _id;
 }

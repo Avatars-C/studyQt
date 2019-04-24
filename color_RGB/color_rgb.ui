@@ -202,30 +202,30 @@
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioButton_2">
+      <widget class="QRadioButton" name="radioButtonDecimal">
        <property name="text">
-        <string>RadioButton</string>
+        <string>十进制</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioButton">
+      <widget class="QRadioButton" name="radioButtonBinary">
        <property name="text">
-        <string>RadioButton</string>
+        <string>二进制</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioButton_3">
+      <widget class="QRadioButton" name="radioButtonOctal">
        <property name="text">
-        <string>RadioButton</string>
+        <string>八进制</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioButton_4">
+      <widget class="QRadioButton" name="radioButtonHexadecimal">
        <property name="text">
-        <string>RadioButton</string>
+        <string>十六进制</string>
        </property>
       </widget>
      </item>

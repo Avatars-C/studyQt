@@ -21,8 +21,19 @@ public:
 
 private slots:
     void on_horizontalSlider_valueChanged(int value);
+
     void colorSliderChangeUpdateSpinBox(QSlider *,int,int,int,QSpinBox *);
-    void mySliderAndSpinBoxChangeColorConnect(void);
+
+    void on_dial_valueChanged(int value);
+
+    void on_radioButtonDecimal_clicked();
+
+    void on_radioButtonBinary_clicked();
+
+    void on_radioButtonOctal_clicked();
+
+    void on_radioButtonHexadecimal_clicked();
+
 private:
     Ui::color_RGB *ui;
 };
